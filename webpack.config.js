@@ -33,17 +33,19 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.scss$/, enforce: 'pre', use: [{
-        loader: "sass-loader", options: {
+      test: /\.scss$/,
+      enforce: 'pre',
+      use: [{
+        loader: "sass-loader",
+        options: {
           outputStyle: 'expanded'
         }
       }]
     }, {
         test: /\.scss$/,
         use: isProd ? ExtractTextPlugin.extract({
-          fallback: 'style-loader',
           use: ['css-loader', 'autoprefixer-loader']
-        }) : ['css-loader', 'autoprefixer-loader']
+        }) : ['style-loader', 'css-loader', 'autoprefixer-loader']
     }]
   },
   plugins: webpackPlugins
