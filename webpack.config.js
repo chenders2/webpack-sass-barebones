@@ -23,7 +23,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, dirs.dist),
     pathinfo: true,
-    publicPath: '/',
     filename: 'main.js'
   },
   devServer: {
