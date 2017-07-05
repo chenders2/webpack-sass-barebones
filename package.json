@@ -1,0 +1,49 @@
+{
+  "name": "webpack-sass-barebones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV='production' ./node_modules/.bin/webpack",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base=./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenders/webpack-sass-barebones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenders/webpack-sass-barebones/issues"
+  },
+  "homepage": "https://github.com/chenders/webpack-sass-barebones#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "autoprefixer-loader": "^3.2.0",
+    "breakpoint-sass": "^2.7.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-breakpoints": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {},
+  "h5bp-configs": {
+    "directories": {
+      "dist": "dist",
+      "src": {
+        "web": "src/web",
+        "server": "src/server",
+        "test": {
+          "web": "src/test/web",
+          "server": "src/test/server"
+        }
+      }
+    }
+  }
+}

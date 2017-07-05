@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+}
+@import "~breakpoint-sass/stylesheets/breakpoint";
+// Set our breakpoints
+$realwide: 1200px;
+$wide: 1024px;
+$medium: 800px;
+
+#main:before {
+  // Default text
+  content: "So NOT medium!";
+  // Screens 800px+ wide
+  @include breakpoint($medium) {
+    content: "So medium!";
+  }
+  // Screens 1024px+ wide
+  @include breakpoint($wide) {
+    content: "So wide!";
+  }
+  // Screens 1200px+ wide
+  @include breakpoint($realwide) {
+    content: "So REALLLLL WIDE ";
+  }
+}
+
+a {
+  // Autoprefixer will expand this out to include:
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  display: flex;
+}
